@@ -8,177 +8,164 @@
     <!-- Font Awesome para os ícones -->
     <link rel="stylesheet" href="https://cloudflare.com">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            min-height: 100vh; /* Ocupa altura toda da tela */
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-        }
+    body {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
 
-       .main-content {
-            flex: 1; /* Faz esta parte crescer e empurrar o rodapé */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Centraliza verticalmente no meio da tela */
-            padding: 20px;
-            text-align: center;
-       }
+    .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
 
-        h1 { font-size: clamp(1.5rem, 8rem, 3.5rem); width: 90%; margin: 0 auto;
-            margin-bottom: 15px; font-weight: bold; }
+    /* Ajustado o clamp para não estourar no mobile */
+    h1 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        width: 95%;
+        margin: 0 auto 15px auto;
+        font-weight: bold;
+    }
 
-        .intro-text { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto;
-                      margin-bottom: 40px !important; opacity: 0.9; line-height: 1.6; }
+    .intro-text {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+        opacity: 0.9;
+        line-height: 1.5;
+    }
 
-        /* Estilo Togetherness (Laranja e Lilás) */
-        .highlight {
-            font-weight: bold;
-            background: linear-gradient(90deg, #f39200, #a166ab);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .highlight {
+        font-weight: bold;
+        background: linear-gradient(90deg, #f39200, #a166ab);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-        .logo-container {
-            background: white;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 40px !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
+    /* Logo ajustada */
+    .responsive-logo {
+        max-width: 120px;
+        height: auto;
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
 
-        /* Ajuste do logotipo para nao ficar gigante no mobile */
-       .responsive-logo {
-            max-width: 150px;
-            height: auto;
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            margin: 20px 0; /* Espaço em cima e embaixo do logo */
-       }
+    /* TIMER CORRIGIDO */
+    .timer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
 
-        /* Timer Estilo Foto para alinhar as caixas */
-        .timer-container {
-            display: flex;
-            flex-wrap: wrap; /* Permite com que os quadrados pulem para a linha de frente no celular */
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
+    .time-box {
+        background-color: #2e7d32; /* Cor verde restaurada */
+        padding: 15px;
+        border-radius: 8px;
+        min-width: 75px;
+        flex: 0 1 auto; /* Impede que cresça demais */
+    }
 
-        .time-box {
-            flex: 1; /* Faz os quadrados crescerem e diminuirem proporcionalmente
-            background-color: #2e7d32;
-            padding: 15px;
-            border-radius: 8px;
-            min-width: 70px; /* Garante que nao fiquem ilegiveis */
-        }
+    .number { font-size: 1.8rem; font-weight: bold; display: block; }
+    .label { font-size: 0.6rem; text-transform: uppercase; opacity: 0.9; }
 
-        .number { font-size: 2rem; font-weight: bold; display: block; }
-        .label { font-size: 0.7rem; text-transform: uppercase; opacity: 0.8; }
+    /* FORMULÁRIO RESPONSIVO SEM SCROLL */
+    .support-box {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 10px;
+    }
 
-        /* Formulário */
-        .support-box {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
+    input, .btn-support {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        display: block;
+        box-sizing: border-box;
+    }
 
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px !important;
-            border: none;
-            border-radius: 6px;
-            background: #f0f0f0;
-        }
+    input {
+        border: 1px solid #ccc;
+        background: #f0f0f0;
+        color: #333;
+    }
 
-        /* Seleciona os seus inputs e o botão de suporte */
-            #userName,
-            #userEmail,
-           .btn-support {
-           width: 100%;           /* Ocupa a largura do contêiner pai */
-           max-width: 400px;      /* Não deixa ficar gigante em telas grandes */
-           margin: 10px auto;     /* Espaço entre os campos e centralização */
-           padding: 12px 15px;    /* Altura interna e um respiro para o texto não colar na borda */
-           border-radius: 8px;    /* Bordas arredondadas suaves */
-           display: block;        /* Um abaixo do outro */
-           box-sizing: border-box; /* Garante que o padding não "estoure" a largura */
-           border: 1px solid #ccc; /* Uma borda fina para os inputs */
-        }
+    .btn-support {
+        background-color: #f39200;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-        .btn-support {
-            width: 100%;
-            max-width: 350px; /* Impede que os botoes fiquem gigantes em monitores grandes */
-            margin: 0 auto;
-            padding: 12px;
-            background-color: #f39200;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    .btn-support:hover { background-color: #d88200; transform: scale(1.02); }
 
-        .btn-support:hover { background-color: #d88200; transform: scale(1.02); }
+    /* RODAPÉ FIXO NO FUNDO */
+    footer {
+        width: 100%;
+        background-color: #003300;
+        padding: 20px;
+        margin-top: auto;
+        font-size: 12px;
+        text-align: center;
+    }
 
-        /* Rodapé Organizado */
-        footer {
-            width: 100%;
-            background-color: #003300;
-            padding: 20px;
-            marin-top: auto; /* garante que o rodape fique sempre colado no fundo da tela */
-            font-size: 13px;
-            text-align: center;
-        }
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+    }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
+    footer a {
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+    }
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-            cursor: pointer;
-        }
+    .icon-orange { color: #f39200; }
+    .icon-wa { color: #25D366; }
 
-        /* Efeito de passar o mouse */
-        footer a:hover { color: #f39200; }
-
-        .icon-orange { color: #f39200; margin-right: 5px; }
-        .icon-wa { color: #25D366; margin-right: 5px; }
-
-    </style>
+    /* AJUSTE EXTRA PARA CELULARES PEQUENOS */
+    @media (max-width: 400px) {
+        .time-box { min-width: 65px; padding: 10px; }
+        .number { font-size: 1.5rem; }
+    }
+</style>
 </head>
 <body>
 
