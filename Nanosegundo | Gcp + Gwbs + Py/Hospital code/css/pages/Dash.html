@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>NANOSEGUNDO | HOSPITAL SERVICES & ARCHITECTURE of MOZAMBIQUE</title>
+    
+    <!-- link css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+  <!-- Level-1-Login -->
+  <div class="login-container">
+      <h2>Secure login</h2>
+      <form id="longinform">
+          <div class="biometric-options">
+              <buttom type="button" id="faceAuth" class="bio-btn">Face ID</buttom>
+              <buttom type="button" id="fingerAuth" class="bio-btn">fingerprint</buttom>
+          </div>
+              <p>or</p>
+              <input type="text" placeholder="Username" required>
+              <input type="password" placeholder="Password" required>
+              <buttom type="submit" class="submit-btn">login</buttom>
+      </form>
+      <!-- Hidden Camera Feed -->
+      <video id="video" width="200" height="200" autoplay style="display:none;"></video>
+  </div>
+  <header>
+      <div class="login">
+      <!-- Main Navigate | Hospital logo-->
+          <a href="/">
+              <img src="assets/img/logo.png" alt="logo.png" width="40" height="40">
+          </a>
+      </div>
+
+      <!-- Simplified Booking Structure -->
+      <div class="booking-container">
+          <h1>Book an Appointment</h1>
+          <form action="#" method="post">
+              <!-- Select Hospital | Possivel dropdown para adiconar lista dos hospitais e localizacao -->
+              <label for="location">Select Hospital & Type:</label>
+              <select id="location" name="location" required>
+                  <option value="">---choose a location---</option>
+                  <option value="Central and Provincial Hospitals (National/Regional Reference)">Central and Provincial Hospitals (National/Regional Reference)</option>
+                  <option value="suburb-clinic">General and Rural Hospitals</option>
+                  <option value="Provincial Hospital">District Hospitals</option>
+                  <option value="Specialized Hospital">Specialized Hospital</option>
+                  <option value="Military Hospital">Military Hospital</option>
+
+              </select>
+
+              <!-- SELECT SERVICES -->
+              <label for="service">Select Service:</label>
+              <select id="service" name="service" required>
+                  <option value="--Choose a Service--"></option>
+                  <option value="general">General Practitioner</option>
+                  <option value="cardio">Cardiology</option>
+                  <option value="dental">Dental</option>
+                  <option value="transfusional">Transfusional agency</option>
+                  <option value="Medical record and statistics">Medical record and statistics</option>
+                  <option value="Eye bank">Eye bank</option>
+                  <option value="Bariatric surgery">Bariatric surgery</option>
+                  <option value="Hospital infection control">Hospital infection control</option>
+                  <option value="Diagnostic imaging">Diagnostic imaging</option>
+                  <option value="Pharmacy">Pharmacy</option>
+                  <option value="External Pharmacy">External Pharmacy</option>
+                  <option value="Speech therapy">Speech therapy</option>
+                  <option value="Harmodynamics">Harmodynamics</option>
+                  <option value="Anatomical pathology laboratory">Anatomical pathology laboratory</option>
+                  <option value="Obstetrics and gynecology">Obstetrics and gynecology</option>
+                  <option value="Pravivis">Pravivis</option>
+                  <option value="Psychiatry">Psychiatry</option>
+                  <option value="Radiotherapy (UNACON)">Radiotherapy (UNACON)</option>
+                  <option value="Birth and death registration">Birth and death registration</option>
+                  <option value="Funeral services">Funeral services</option>
+                  <option value="Social center">Social center</option>
+                  <option value="High-risk pregnancy and medical fatality outpatient clinic">High-risk pregnancy and medical fatality outpatient clinic</option>
+                  <option value="Milk bank">Milk bank</option>
+                  <option value="Surgery">Surgery</option>
+                  <option value="Medical clinic">Medical clinic</option>
+                  <option value="CRAI (center for rehabilitation and early intervention)">CRAI (center for rehabilitation and early intervention)</option>
+                  <option value="Endoscopy">Endoscopy</option>
+                  <option value="Physiotherapy">Physiotherapy</option>
+                  <option value="Hemodialysis">Hemodialysis</option>
+                  <option value="clinical analysis laboratory">Clinical analysis laboratory</option>
+                  <option value="nutrition and diet">Nutrition and diet</option>
+                  <option value="clinical psichology">Clinical psychology</option>
+                  <option value="adult and pediatric">Adult and pediatric</option>
+                  <option value="chemotherapy">Chemotherapy</option>
+                  <option value="therapeutic recreation">Therapeutic recreation</option>
+                  <option value=""breastfeeding s.o.s>Breastfeeding S.O.S</option>
+                  <option value="intensive care">Intensive care</option>
+                  <option value="emergency & urgent care adult and pediatric">Emergency and urgent care adult and pediatric</option>
+              </select>
+
+              <!-- Seleciona o Nome do hospital e localizacao Desejada para sua Consulta | Hospitais Disponiveis -->
+              <h3>Hospitais Disponiveis</h3>
+              <ul class="Hospital-list">
+                  <li class="hospital-item publico">
+                      <strong>Hospital Central de Maputo (publico)</strong>
+                      <span class="tipo">Publico</span>
+                  </li>
+                   <li class="hospital-item publico">
+                      <strong>Hospital Central de Maputo (publico)</strong>
+                      <span class="tipo">Publico</span>
+                  </li>
+                  <li class="Hospital-item Privado">
+                      <strong>Hospital Privado de Maputo (Privdo)</strong> - Leste, Cidade C <br>
+                      <span class="tipo">Privado</span>
+                  </li>
+                  <li class="Hospital-item Privado">
+                      <strong>Hospital Privado de Maputo (Privado)</strong> - Leste, Cidade C <br>
+                      <span class="tipo">Privado</span>
+                  </li>
+              </ul>
+
+              <h4>Marcar Consulta</h4>
+              <form id="appointmentForm">
+                  <div class="form-group">
+                      <label>Paciente:</label>
+                      <input type="text" id="nome" required>
+                  </div>
+                  <div class="form-group">
+                      <label>Hospital:</label>
+                      <select id="hospital" required>
+                          <option value="Hosp1">Hospital Central de Maputo (HCM): Maputo Cidade</option>
+                          <option value="Hosp1">Hospital Central da Beira (HCB): Sofala.</option>
+                          <option value="Hosp1">Hospital Central de Nampula: Nampula.</option>
+                          <option value="Hosp1">Hospital Provincial da Matola: Maputo Provincia.</option>
+                          <option value="Hosp1">Hospital Geral Jose Macamo: Maputo Cidade.</option>
+                          <option value="Hosp1">Hospital Geral de Mavalane: Maputo Cidade.</option>
+                          <option value="Hosp1">Hospital Geral de Chamaculo: Maputo Ciade.</option>
+                          <option value="Hosp1">Hospital Rural de Buzi: Sofala.</option>
+                          <option value="Hosp1">Hospital Rural de Catandica: Manica.</option>
+                          <option value="Hosp1">Hospital Distrital de Massinga: Inhambane.</option>
+                          <option value="Hosp">Hospital Militar de Maputo</option>
+                          <option value="Hosp1">Hospital Distril de Caia. Sofala.</option>
+                          <option value="Hosp1">Hospital Distral De Gurue: Zambezia.</option>
+                          <option value="Hosp1">Hospital Distrital de Nacala: Nampula.</option>
+                          <option value="Hosp1">Hospital Distrital de Quissico: Inhambane.</option>
+                          <option value="Hosp1">Hospital Carmelo: Provincia de Niassa (Mechelengenge).</option>
+                          <option value="CS 1 e 2">Centro de Saude de Barauro/Boroma/Caleia.</option>
+                          <option value="CS 1 e 2">Centro de Saude da Maxixe</option>
+                          <option value="CS 1 e 2">Centro de saude do Chamanculo</option>
+                          <option value="CS 1 e 2">Centro de saude da Matola (Area metropolitana).</option>
+                          <option value="CS 1 e 2">Centro de saude da Catembe</option>
+                          <option value="CS 1 e 2">Centro de saude da Inhaca</option>
+                          <option value="CS 1 e 2">Centro de saude de Muaua</option>
+                          <option value="CS 1 e 2">Centro de saude Urbano do Macurungo</option>
+                          <option value="CS 1 e 2">Centro de saude de Boavista</option>
+                          <option value="CS 1 e 2">Centro de saude de Nhacatale</option>
+                          <option value="CS 1 e 2">Centro de saude de Muguliua</option>
+                          <option value="CS 1 e 2">Centro de saude de Garganta</option>
+                          <option value="CS 1 e 2">Centro de saude de Manhaua</option>
+                          <option value="CS 1 e 2">Centro de saude de Namahipe</option>
+                          <option value="CS 1 e 2">Centro de saude de Mossuril</option>
+                          <option value="CS 1 e 2">Centro de saude do Fomento</option>
+                          <option value="CS 1 e 2">Centro de saude da Machava II:</option>
+                          <option value="CS 1 e 2">Centro de saude da Motola C:</option>
+                          <option value="CS 1 e 2">Centro de saude da Matola-Gare</option>
+                          <option value="CS 1 e 2">Centro de saude da Malhangalene</option>
+                          <option value="CS 1 e 2">Centro de saude da Cidade de Maputo</option>
+                          <option value="CS 1 e 2">Centro de saude da Polana-Cimento</option>
+                          <option value="CS 1 e 2">Centro de saude Moyo</option>
+                          <option value="CS 1 e 2">Centro de saude Santa Filomena</option>
+                          <option value="CS 1 e 2">Centro de saude de Albazine</option>
+                          <option value="CS 1 e 2">Centro de saude Sao Damanso</option>
+                          <option value="CS 1 e 2">Ndlavela Centro de Saude Urbano A</option>
+                          <option value="CS 1 e 2">Cadeia Central Posto de Saude</option>
+                          <option value="CS 1 e 2">Centro de Saude de CMC</option>
+                          <option value="CS 1 e 2">Hospital de Xipamanine</option>
+                          <option value="CS 1 e 2">CCS - Centro de Colaboracao em saude</option>
+                          <option value="CS 1 e 2">Centro de saude Vilas</option>
+                          <option value="CS 1 e 2">Centro de saude Acipol</option>
+                          <option value="CS 1 e 2">Cruz Azul</option>
+                          <option value="CS 1 e 2">Hanhane Posto De Saude</option>
+                          <option value="CS 1 e 2">Infulene Hospita Psiquiatrico</option>
+                          <option value="CS 1 e 2">Centro de Saude de Muele</option>
+                          <option value="CS 1 e 2">Servicos Provinciais de Saude da Zambeze</option>
+                          <option value="CS 1 e 2">Centro de saude de Mocoduene</option>
+                          <option value="CS 1 e 2">Hospital Rural De Chalucuane</option>
+                          <option value="CS 1 e 2">Centro de saude Urbano</option>
+                          <option value="CS 1 e 2">Centro de saude Urbano de Mpadue, Tete</option>
+                          <option value="CS 1 e 2">SDSMAS NICOADALA</option>
+                          <option value="CS 1 e 2">Centro saude MPDUE 7</option>
+                          <option value="CS 1 e 2">Centro Operativo de Emergencia em Saude Publica</option>
+                          <option value="CS 1 e 2">Centro de saude de Monapo (Monapo Central Hospital)</option>
+                          <option value="CS 1 e 2">Machanga (SEDE) Centro de saude de Saude Rural I</option>
+                          <option value="CS 1 e 2">Hospital Distrital</option>
+                          <option value="CS 1 e 2">Chicuque Rural Hospital</option>
+                          <option value="CS 1 e 2">ICOR Instituto do Coracao</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>data:</label>
+                      <input type="datetime-local" id="datetime-local" required>
+                  </div>
+                  <div class="form-group">
+                      <label>Seu E-mail ou Telefone:</label>
+                      <input type="text" id="contacto" placeholder="Digite seu email ou telefone" value="usuario@mail.com">
+                  </div>
+                  <div class="codigo-confirmacao">
+                      codigo de Confirmacao: <span id="codigo">HOSP-98764</span>
+                      <div class="confirmation" id="confBox">
+                          <p><strong>Consulta agendada com sucesso</strong></p>
+                      </div>
+                  </div>
+      </div>
+      <button type="submit">Confirmar Agendamento</button>
+      </form>
+
+      <button type="submit">Search & Book</button>
+      </form>
+      </div>
+
+      <!-- Navigate | Menu -->
+      <button class="menu-icon" aria-label="Open-Menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </button>
+
+      <!-- ID | Hospital --> |
+
+      <section id="Mozambique Nacional Hospital Services">
+          <nav class="navigation-bar">
+              <ul>
+
+                  <!-- Second Navigate | dropdown-page -->
+                  <li class="Dropdown">
+                       <a href="#">Services</a>
+                           <ul>
+                               <div class="dropdown-content">
+                                   <li><a href="Transfusional agency.html">transfusional agency</a></li>
+                                   <li><a href="Medical record and statistics.html">Medical record and statistics</a></li>
+                                   <li><a href="Eye bank.html">Eye bank</a></li>
+                                   <li><a href="Bariatric surgery.html">Bariatric surgery</a></li>
+                                   <li><a href="Hospital infection control.html">Hospital infection control</a></li>
+                                   <li><a href="Diagnostic imaging.html">Diagnostic imaging</a></li>
+
+                                   <!-- dropdown -->
+                                   <li class="dropdown">
+                                   <a href="Pharmacy.html">Pharmacy</a>
+                                       <ul>
+                                           <div class="dropdown-content">
+                                               <li><a href="External Pharmacy.html">External Pharmacy</a></li>
+                                               <li><a href="internal pharmacy.html">External pharmacy</a></li>
+                                           </div>
+                                       </ul>
+                                   </li>
+                                   <li><a href="Speech therapy.html">Speech therapy</a></li>
+                                   <li><a href="Harmodynamics.html">Harmodynamics</a></li>
+                                   <li><a href="Anatomical pathology laboratory.html">Anatomical pathology laboratory</a></li>
+                                   <li><a href="Obstetrics and gynecology.html">Obstetrics and gynecology</a></li>
+                                   <li><a href="transfusional agency.html">Pravivis</a></li>
+                                   <li><a href="Pravivis.html">Psychiatry</a></li>
+                                   <li><a href="Radiotherapy (UNACON).html">Radiotherapy (UNACON)</a></li>
+
+                                   <!-- dropdown -->
+                                   <li class="dropdown">
+                                    <a href="Birth and death registration.html">Birth and death registration</a>
+                                       <ul>
+                                           <div class="dropdown-content">
+                                                 <li><a href="Funeral services.html">Funeral services</a></li>
+                                           </div>
+                                       </ul>
+                                   </li>
+                                   <li><a href="Social center.html">Social center</a></li>
+                                   <li><a href="High-risk pregnancy and medical fatality outpatient clinic.html">
+                                        High-risk pregnancy and medical fatality outpatient clinic</a></li>
+                                   <li><a href="Milk bank.html">Milk bank</a></li>
+                                   <li><a href="Surgery.html">Surgery</a></li>
+                                   <li><a href="Medical clinic.html">Medical clinic</a></li>
+                                   <li><a href="CRAI (center for rehabilitation and early intervention.html">
+                                        CRAI (center for rehabilitation and early intervention)</a></li>
+                                   <li><a href="Endoscopy.html">Endoscopy</a></li>
+                                   <li><a href="Physiotherapy.html">Physiotherapy</a></li>
+                                   <li><a href="Hemodialysis.html">Hemodialysis</a></li>
+                                   <li><a href="Clinical analysis laboratory.html">Clinical analysis laboratory</a></li>
+                                   <li><a href="Nutrition and diet.html">Nutrition and diet</a></li>
+                                   <li><a href="Clinical psychology.html">Clinical psychology</a></li>
+                                   <li><a href="Adult and pediatric.html">Adult and pediatric</a></li>
+                                   <li><a href="Chemotherapy.html">Chemotherapy</a></li>
+                                   <li><a href="Therapeutic recreation.html">Therapeutic recreation</a></li>
+                                   <li><a href="Breastfeeding S.O.S.html">Breastfeeding S.O.S</a></li>
+                                   <li><a href="Intensive care.html">Intensive care</a></li>
+                                   <li><a href="Emergency and urgent  care adult and pediatric.html">
+                                        Emergency and urgent  care adult and pediatric</a></li>
+                               </div>
+                           </ul>
+                       </li>
+
+                  <!-- dropdown | Page-1 -->
+                  <li class="dropdown">
+                  <a href="#">Visits & Follow-up</a>
+                      <ul>
+                          <div class="dropdown-content">
+                               <li><a href="#">Companions and family</a></li>
+                               <li><a href="#">Visitors</a></li>
+                          </div>
+                      </ul>
+                  </li>
+
+                  <!-- dropdown | Page-2 -->
+                  <li class="dropdown">
+                  <a href="#">Teaching</a>
+                      <ul>
+                          <div class="dropdown-content">
+                               <li><a href="#">Medical residency</a></li>
+                               <li><a href="#">Continuing education</a></li>
+                               <li><a href="#">Research support center</a></li>
+                               <li><a href="#">Library</a></li>
+                               <li><a href="#">Announcements</a></li>
+                          </div>
+                      </ul>
+                  </li>
+
+                  <!-- dropdown | Page-3 -->
+                  <li class="dropdown">
+                  <a href="#">Training</a>
+                      <ul>
+                          <div class="dropdown-content">
+                              <li><a href="#">events</a></li>
+                              <li><a href="#">Certificates</a></li>
+                          </div>
+                      </ul>
+                  </li>
+
+                  <!-- Dropdown | Page-4 -->
+                  <li class="dropdown">
+                      <a href="#">The Hospital</a>
+                      <div class="dropdown-content">
+                          <a href="#">Hospital Central of Maputo</a>
+                          <ul>
+                              <li><a href="#">Our history</a></li>
+                              <li><a href="#">Institutional</a></li>
+                              <li><a href="#">Our infrastructure</a></li>
+                              <li><a href="#">Our certifications</a></li>
+                              <li><a href="#">Working groups</a></li>
+                              <li><a href="#">Patients rights and duties</a></li>
+                              <li><a href="#">Companions and family</a></li>
+                              <li><a href="#">Videos</a></li>
+                              <li><a href="#">Tips</a></li>
+                              <li><a href="#">Benchmarking</a></li>
+                          </ul>
+                      </div>
+                  </li>
+
+                  <!-- dropdown | Page-5 -->
+                 <li class="dropdown">
+                      <a href="#">Contact</a>
+                     <ul>
+                         <div class="dropdown-content">
+                             <li><a href="#">Emergency contact & Support</a></li>
+                        </div>
+                     </ul>
+                 </li>
+              </ul>
+          </nav>
+      </section>
+  </header>
+ <script src="script.js"></script>
+
+   <!-- FOOTER -->
+        <footer class="main-footer">
+                <p1>
+                  Copyright ©2021-2026 Transforming algorithms into code | Design by Nanosegundo | All Rights reserved. <br>Terms of Use
+                    | privacy statement and consent clause | +27 (0) 691308594 - info@nanosegundo.tech - www.nanosegundo.tech | legally | Site Map
+                </p1>
+            <div class="color-bar"></div>
+        </footer>
+
+  </body>
+</html>

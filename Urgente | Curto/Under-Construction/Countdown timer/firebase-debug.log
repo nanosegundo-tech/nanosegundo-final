@@ -1,0 +1,57 @@
+[debug] [2026-05-03T20:18:07.149Z] ----------------------------------------------------------------------
+[debug] [2026-05-03T20:18:07.154Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init hosting
+[debug] [2026-05-03T20:18:07.154Z] CLI Version:   15.16.0
+[debug] [2026-05-03T20:18:07.154Z] Platform:      darwin
+[debug] [2026-05-03T20:18:07.155Z] Node Version:  v20.12.2
+[debug] [2026-05-03T20:18:07.155Z] Time:          Sun May 03 2026 22:18:07 GMT+0200 (South Africa Standard Time)
+[debug] [2026-05-03T20:18:07.155Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/frans/Desktop/Nano | Projects 24/Urgente | Curto/Under-Construction/Countdown timer
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-05-03T20:27:02.896Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-03T20:27:02.897Z] > authorizing via signed-in user (nanosengundo@gmail.com)
+[debug] [2026-05-03T20:28:25.604Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:28:25.605Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:28:25.611Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-05-03T20:28:25.611Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"nanosegundo-timer-project"}
+[debug] [2026-05-03T20:28:26.957Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-05-03T20:28:26.957Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_AVAILABLE","suggestedProjectId":"nanosegundo-timer-project"}
+[debug] [2026-05-03T20:29:35.099Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:29:35.099Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:29:35.100Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-05-03T20:29:35.101Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"nanosegundo-timer-project","name":"nanosegundo timer project"}
+[debug] [2026-05-03T20:29:37.494Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2026-05-03T20:29:37.495Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.8944065217235992361"}
+[debug] [2026-05-03T20:29:37.497Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:29:37.497Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:29:37.497Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.8944065217235992361 [none]
+[debug] [2026-05-03T20:29:38.982Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.8944065217235992361 200
+[debug] [2026-05-03T20:29:38.982Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.8944065217235992361 {"name":"operations/create_project.global.8944065217235992361","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"270534538117","projectId":"nanosegundo-timer-project","lifecycleState":"ACTIVE","name":"nanosegundo timer project","createTime":"2026-05-03T20:29:36.870Z"}}
+[debug] [2026-05-03T20:29:38.984Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:29:38.984Z] Checked if tokens are valid: true, expires at: 1777842728597
+[debug] [2026-05-03T20:29:38.985Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/nanosegundo-timer-project:addFirebase [none]
+[debug] [2026-05-03T20:29:40.775Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/nanosegundo-timer-project:addFirebase 403
+[debug] [2026-05-03T20:29:40.776Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/nanosegundo-timer-project:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-05-03T20:29:40.782Z] Request to https://firebase.googleapis.com/v1beta1/projects/nanosegundo-timer-project:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2026-05-03T20:29:41.324Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/nanosegundo-timer-project:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

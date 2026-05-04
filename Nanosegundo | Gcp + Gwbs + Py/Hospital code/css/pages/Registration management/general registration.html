@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration management</title>
+</head>
+<body>
+<!-- HTML structure (conceptual) -->
+    <form id="registration form">
+        <h2>General registration</h2>
+        <label for="Record type"></label>
+        <select id="Record type">
+            <option value="patient">Patient</option>
+            <option value="employee">Employee</option>
+            <option value="internal pharmacy">Internal pharmacy</option>
+            <option value="funeral home">Funeral home</option>
+            <option value="external pharmacy">External pharmacy</option>
+            <option value="external hygiene and cleaning">external hygiene and cleaning</option>
+            <option value="external hospital hospitality">external hospital hospitality</option>
+            <option value="external linen and laundry">external linen and laundry</option>
+            <option value="external building and equipment maintenance">external building and equipment maintenance</option>
+            <option value="internal logistical and supplies">internal logistical and supplies</option>
+            <option value="external security and reception">external security and reception</option>
+            <option value="external bed management">external bed management</option>
+            <option value="external IT services and technical support">external IT services and technical support</option>
+            <option value=""></option>
+        </select>
+    </form>
+<!-- Specific fields here -->
+    <form action="/save-registration" method="post">
+        <label for="none">Full name/Corporate Name:</label>
+        <input id="none" name="name" required type="text">
+
+        <label for="nuit">Nuit:</label>
+        <input type="text" id="nuit" name="nuit" required>
+
+        <label for="medical record number">Medical record number:</label>
+        <input type="text" id="medical record number" name="medical record number" required>
+
+        <label for="date-birth">Date of birth:</label>
+        <input type="date" id="date-birth" name="date-birth" required>
+
+        <label for="contact">contact/whatsapp:</label>
+        <input type="month" id="contact" name="contact" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="emil" required>
+
+        <label for="agreement">agreement/plan:</label>
+        <input type="text" id="agreement" name="agreement" required>
+
+        <label for="pre-screening">Pre-screening:</label>
+        <input type="text" id="pre-screening"
+               name="history of allergies, medications used regularly" required>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear form</button>
+        <button type="button" onclick="window.location.href='/previous-page">Cancel</button>
+    </form>
+</body>
+</html>
