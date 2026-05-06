@@ -1,0 +1,129 @@
+
+/* Reset basico para garantir centralizacao */
+       * { margin: 0; padding: 0; box-sizing: border-box; font-family: Tahoma, sans-serf; }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--light);
+                color: var(--dark); }
+
+/*CSS Robustness and Responsiveness | Este countdown-box so funciona apos ser activado manualmente */
+        countdown-box { background-color: #003366; color: white; padding: 20px; border-radius; 10px; text-align: center;
+               width: center; margin-top; 0; font-family: Tahoma sans-serif; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+
+/* Responsavel pelo brilho do body */
+        :root { --primary: #007bff; --dark: #333; --light: #f4f4f4; }
+
+/* Countdown Timer Positioned */
+        #countdown-timer { background-color: #003366; color: white; padding: 10px; text-align: center; font-size: 12px;
+                         font-weight: bold; position: sticky; left: 0; top: 0; width: 100%; z-index: 1000;
+                         box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+
+        .talent-guide-header { text-align: center; margin: 40px 0; /* Da um respiro entre o timer e o formulario */ }
+        .talent-guide-header h1 { font-family: Tahoma, Arial, sans-serif; font-weight: 800; letter-spacing: 20px;
+                        color: #333; margin-bottom: 5px; }
+
+/* Grids section CSS */
+        .jobs-grid { flex: 1; /* Faz o container ocupar o espaco entre o header e o footer */
+                display; flex; padding: 0px 20% 15%; 20px; justify-content: center; text-align: center;  }
+/* reduzir o espaco entre os titulos e os campos */
+        .jobs-grid h2, .jobs-grid h3, .jobs-grid p { margin-bottom: 5px !important; }
+        .jobs-card { width: 100% !important; /* aumenta largura em telas pequenas para nao ficar estigando */
+               font-size: 10px; background: #00000033; padding: 40px !important;border-radius: 8px;
+               box-shadow: 0 4px 2px rgba(0,0,0,0.1); transition: transform 0.3s; max-width: ; }
+        .jobs-card:hover { transform: translateY(-5px); }
+
+/* Reduz o espaco entre as labels/input */
+        .input-group { margin-bottom: 15px !important; border-radius: 25px: }
+        .input-group label { display: block; margin-bottom: 15px; color: #666; }
+        .input-group input { width: 80%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-align: center;
+                             justify-content: center; }
+        /* Estilo base para o botão de submit */
+.btn-login {
+    background-color: #ff8c00;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 12px; /* Aumentei para ficar igual à sua foto */
+    cursor: pointer;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 25px;
+    display: block;   /* Garante que ele se comporte como um bloco centralizado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Efeito ao passar o mouse (Desktop) */
+.btn-login:hover {
+    background-color: #003366;
+    transform: translateY(-2px); /* Leve pulo para indicar clique */
+}
+
+/* Efeito ao clicar (Feedback visual no Mobile) */
+.btn-login:active {
+    transform: scale(0.98);
+    background-color: #cc7000;
+}
+
+/* Ajuste para telas menores (Mobile) */
+@media (max-width: 600px) {
+    .btn-login {
+        font-size: 14px;
+        padding: 12px;
+        width: 90%; /* Margem lateral suave no celular */
+    }
+}
+
+/* Our ethics sterilzation*/
+        .our-ethics { padding: 40px 20px; /* da espao generoso em cima e embaixo */
+                       background-color: #ffffff; /* garante o fundo branco */
+                       margin-top: 30px;    /* Empurra a frase para longe dos cards */
+                       margin-bottom: 30px; /* Garante que ela não cole no footer preto */ text-align: center;  /* Mantém centralizado */
+                       font-style: italic;  /* Opcional: dá um toque de destaque à frase */
+                         color: #333;         /* Cor suave para leitura */
+}
+
+       .our-ethics p { font-style: italic; color: #555; margin: 0; }
+
+
+/* --- telas grandes ( computadores e tablets) --- */
+        @media ( min-width: 769px;) {
+        body { font-size: 16px; }
+        .jobs-card {  margin-top: ; /* faz o card e o botao descer um pouco */ padding:; }
+        }
+      }
+
+/* --- estilo para telemoveis  (telas pequenas ate 480px ) --- */
+        @media (max-width: 480px) {
+
+         }
+         .jobs-card { margin-top: 5%; /* no telemovel fica mais em cima para invitar o scroll */
+                      padding: { width: 100%; height: 50px; /* botao facil de clicar com o polegar */
+            }
+
+          }
+
+
+/* Success Message */
+  .hidden { display: none !important; }
+  #success-message { text-align: center; padding: 20px; background-color: rgba(0, 255, 102, 0.1); /* fundo verde trnsparente */
+      color: #00ff66; border: 1px solid #00ff66; padding: 20px; text-align: center; font-family: 'Courier New', Courier, monospace);
+      box-shadow: 0 0 15px rgba(0, 255, 102, 0.3); margin-top: 20px; animation fadeIn 0.5s ease-in-out; }
+/* animacao suave para aparecer */
+   @keyframes fadeIn {
+           from { opacity: 0; transform:  translateY( -10px); }
+           to { opacity: 1; transform: translateY(0); }
+      }
+
+/* General Styles for footer */
+        .footer { text-align: center; background-color: #003366; color: white; font-size: 10px !important; gap: 5px;
+               ; text-decoration: none; margin-top: -50px; padding: 10px 0;
+                 padding-top: 20px;   /* Dá espaço interno no topo do footer preto */
+                 padding-bottom: 20px;/* Dá espaço interno na base */ }
+        .footer-links a { color: #fff; transition: color 0.3s; }
+        .footer-links a:hover { color: #00bcd4; /* color when hovering the mouse */ }
+
+/* o simbolo # indica que estamos a configurar um ID especifica */
+  #display { color: #ff8c00; font-style; italic; font-family: Tahoma, sans-serif; text-align: center;
+        font-weight: bold; min-height: 20px; transition: opacity 0.5 ease; }

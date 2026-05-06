@@ -1,10 +1,264 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; /* Fundo leve para destacar o conteúdo */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA PRINCIPAL (CONTAINER)
+   ========================================================================== */
+.platform-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px; /* Reduzi o padding superior */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha tudo para o topo */
+    min-height: 100vh; /* Forca altura total da janela */
+}
+
+/* ==========================================================================
+   3. HERO SECTION (TOPO DA PÁGINA)
+   ========================================================================== */
+   /* 2. Aproximar o Titulo do card */
+.platform-hero {
+     padding-bottom: 0;
+    text-align: center;
+    padding: 20px 10px ; /* Reduza drasticamente */
+    margin-bottom: 0 !important; /* zera a margem inferior */
+    background-color: #ffffff; /* Fundo limpo para destacar o texto */
+}
+
+  /* Subtitulo */
+  .hero-subtitule { font-size: 1.1rem; text-align: center; /* Garante que o texto fique no meio */
+               margin: 0 auto 10px;         /* Centraliza o bloco de texto horizontalmente */
+               max-width: 800px;       /* Limita a largura para melhor leitura */
+               display: block;         /* Garante que ele se comporte como um bloco */
+               line-height: 1.4;       /* Melhora o espaçamento entre linhas */
+               color: #555;            /* Cor suave para contraste */ }
+
+  /* Destaque em verde (Numeros e palavras-chave) */
+  .highlight { color: #27ae60; /* Verde sustentavel */  font-weight: 700;  font-size: 1.0rem; }
+
+  /* Estiloa para a tag strong dentro do subtitulo */
+  .hero-subtitule strong { color: #2d3436; text-transform: uppercase; font-size: 1.1rem; }
+
+.platform-hero h1 {
+    font-size: 1.50rem;
+    color: #1a2a4e; /* Azul Escuro */
+    margin: 5px;
+}
+
+
+/* ==========================================================================
+   4. SEÇÃO DE CONTEÚDO (HOSPITAL + IMAGEM LADO A LADO)
+   ========================================================================== */
+.details-content {
+    display: flex;          /* Faz a mágica de colocar lado a lado */
+    align-items: center;    /* Centraliza verticalmente texto e imagem */
+    justify-content: space-between;
+    gap: 30px;              /* Espaço entre o texto e a imagem */
+    background-color: #ffffff;
+    margin-top: 80px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+    margin-bottom: 10px; /* Reduzindo para aproximar dos cards baixo */
+}
+
+/* Lado do Texto */
+.text-block {
+    flex: 1.2;
+}
+
+.text-block h2 {
+    font-size: 1.2rem;
+    color: #1a2a4e;
+    margin-bottom: 10px;
+}
+
+.check-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* Botão Laranja */
+.btn-detail {
+    background-color:  #ff6b00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-detail:hover {
+    background-color: #003366;
+    transform: translateY(-3px);
+}
+
+/* Lado da Imagem */
+.hospital-image {
+    flex: 0.8;
+    text-align: center;
+}
+
+.image-label {
+    font-weight: bold;
+    color: #ff6b00;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vision-text {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.vision-text h3 {
+    font-size: 1.1rem;
+    color: #1a2a4e;
+    margin-bottom: 5px;
+}
+
+.vision-text p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ==========================================================================
+   5. GRID DE CARDS (RESUMO FINAL)
+   ========================================================================== */
+.cards-grid {
+    display: flex;
+    margin-top: 80px;
+    padding: 0;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: #1a2a4e;
+    font-size: 1.0rem;
+}
+
+.border-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #ff6b00; /* Sua cor de marca */
+    border-radius: 0 0 15px 15px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (MOBILE)
+   ========================================================================== */
+@media (max-width: 850px) {
+    .details-content {
+        flex-direction: column; /* No celular, a imagem vai para baixo do texto */
+        padding: 30px;
+        text-align: center;
+    }
+
+    .vision-text {
+        text-align: center;
+    }
+
+    .platform-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ============================================================
+   SEÇÃO FOOTER (LAYOUT RESPONSIVO)
+   ============================================================ */
+.footer {
+    background-color: #002244; /* Um azul um pouco mais escuro que o header */
+    color: white;
+    padding: 40px 5% 20px;
+    margin-top: -190px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: orange;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links a {
+        padding: 15px 0;
+        border-top: 1px solid #eee;
+        margin-top: auto; /* Empura o rodape para o fim da tela */
+        display: inline-block;
+    }
+}

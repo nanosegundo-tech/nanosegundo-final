@@ -1,10 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Talent Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="assets/css/careers.css">
 </head>
 <body>
-$END$
+<!-- countdown timer no top -->
+<div class="countdown-box">
+    <div id="countdown-timer">
+        Remaining Time:
+        <span id="time-days">00</span>:
+        <span id="time-hours">00</span>:
+        <span id="time-mins">00</span>:
+        <span id="time-secs">00</span>
+    </div>
+</div>
+<div class="talent-guide-header">
+    <h1>TALENDE GUIDE</h1>
+</div>
+   <!-- Seção Principal de Vagas (Jobs Grid) -->
+<div class="jobs-grid">
+
+    <!-- VAGA 1: Assistente Administrativa (Mozambique) -->
+    <div class="jobs-card">
+        <h2>Job Title & Meta: Administrative & Finance Assistant | Project Support (Long Term)</h2>
+        <h3>Location: Maputo, Mozambique | Hybrid (Freelancer)</h3>
+        <p>Description: Entry-level role focused on logic and process organization | GCP & GWS. (2-4 days per week with proactive self-management).</p>
+
+        <div class="app-form" data-country="Mozambique">
+            <form>
+                <div class="input-group">
+                    <label>
+                        <input name="fullname" placeholder="Full Name" required><br>
+                    </label>
+                    <label>
+                        <input type="email" name="email" placeholder="E-mail" required><br>
+                    </label>
+                    <!-- Campos de Endereço com Autocomplete para UX Mobile/Desktop -->
+                    <label>
+                        <input type="text" name="address" placeholder="Residential Address" autocomplete="shipping street-address" required><br>
+                    </label>
+                    <label>
+                        <input type="url" name="drive_link" placeholder="Google Drive letter (link) | jobs@nanosegundo.tech" required><br>
+                    </label>
+                    <button type="submit" class="btn-login">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- VAGA 2: Software Developer (Remote) -->
+    <div class="jobs-card">
+        <h2>Job Title: Software Developer | SaaS Ecosystem</h2>
+        <h3>Location: Remote (Mozambique, South Africa & Burkina Faso) | Freelancer</h3>
+        <p>Description: Transforming algorithms into scalable code. Focused on building the Nanosegundo SaaS ecosystem for the African market.</p>
+
+        <div class="app-form" data-country="Remote">
+            <form>
+                <div class="input-group">
+                    <label>
+                        <input name="fullname" placeholder="Full Name" required><br>
+                    </label>
+                    <label>
+                        <input type="email" name="email" placeholder="E-mail" required><br>
+                    </label>
+                    <label>
+                        <input type="text" name="address" placeholder="Residential Address" autocomplete="shipping street-address" required><br>
+                    </label>
+                    <label>
+                        <input type="url" name=" Google Drive_link" placeholder="(CV/Application Letter)" required><br>
+                    </label>
+                    <button type="submit" class="btn-login">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- VAGA 3: Especialista em Contratos Trabalhistas -->
+    <div class="jobs-card">
+        <h2>Job Title: Labor Contract Specialist | International Compliance</h2>
+        <h3>Location: South Africa & Burkina Faso | Freelancer (On-demand)</h3>
+        <p>Description: Specializing in international labor law and complience for freelance and service-based contracts.</p>
+
+        <div class="app-form" data-country="International">
+            <form>
+                <div class="input-group">
+                    <label>
+                        <input name="fullname" placeholder="Full Name" required><br>
+                    </label>
+                    <label>
+                        <input type="email" name="email" placeholder="E-mail" autocomplete="email" required><br>
+                    </label>
+                    <label>
+                        <input type="text" name="address" placeholder="Residential Address" autocomplete="shipping street-address" required><br>
+                    </label>
+                    <label>
+                        <input type="url" name="drive_link" placeholder="LinkedIn / CV Link" required><br>
+                    </label>
+                    <button type="submit" class="btn-login">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="footer-placeholder"></div>
+   <!-- seccao script -->
+   <script src="assets/script/script.js"></script>
 </body>
 </html>

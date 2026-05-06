@@ -1,0 +1,137 @@
+/* 1. Garante que nada prenda o rodape */
+body, html { margin: 0; padding: 0; width: 100%; overflow-x: hidden; /* Evita barra de rolagem laterais */ }
+html { scroll-behavior: smooth; }
+/* 2. O conteudo da pagina de contacto fica centralizado, mas o footer nao */
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto; /* Centraliza os escritorios */
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0b111e;
+}
+
+.branches-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.branch-card {
+    margin-top: -1px;
+    min-width: 300px;
+    flex: 1;
+    display:;
+    grid-template-columnn: repeat(auto-fit, minmax(300px, 1fr));
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
+    border-color: #0b111e;
+}
+
+.branch-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+.flag { font-size: 24px; }
+
+.branch-header h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #0b111e;
+}
+
+/* Estilo de endereco */
+address { font-style: normal; line-height: 1.6; color: #555; font-size: 15px; }
+
+.branch-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+.green-line {
+    margin-top: 20px !important;
+    font-weight: bold;
+    color: #0b111e !important;
+    font-size: 14px !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .branches-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* ============================================================
+   SEÇÃO FOOTER (LAYOUT RESPONSIVO)
+   ============================================================ */
+
+   .footer {
+    margin-top: 200px;
+    background-color: #002244;
+    color: white;
+    padding: 60px 5% 30px;
+    flex-shrink: 0; /* Impede o footer de encolher */
+}
+
+/* Container principal do rodape */
+.footer-grid {
+    width: 100% ;
+    padding: 0 5%;
+    max-width: 2150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Garante que as informacoes da esquerda fiquem alinhadas a esquerda */
+.footer-info { text-align: left-end; }
+
+/* Garante que os links da direita fiquem alinhados a direita */
+.footer-links { display: flex; gap: 20px; text-align: right; } /* Espaco entre as links */
+/* Estilo para a linha de " All Rights Reserved" la embaixo */
+.rights-text { text-align: center; width: 100%; margin-top: 20px; opacity: 0.7; font-size: 10px; }
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover { color: #ff6b00; }
+
+@media (max-width: 768px) {
+    .footer-grid { flex-direction: column; text-align: center; }
+    .footer-links a { margin: 10px; display: inline-block; }
+}

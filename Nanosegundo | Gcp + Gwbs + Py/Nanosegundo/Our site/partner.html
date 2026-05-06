@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-
+    width, initial-scale=1.0">
+    <title>Patners</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/partner.css">
+</head>
+<body>
+<main class="partnership-container">
+    <header class="partnership-header">
+        <h1>Registro de Parceria Público | Privada</h1>
+    </header>
+
+    <form id="partnerForm" class="partnership-form" enctype="multipart/form-data">
+        <!-- Seção: Dados da Empresa -->
+        <fieldset class="form-group">
+            <legend>Dados da Empresa | Instituição Privada</legend>
+            <div class="row">
+                <div class="field">
+                    <label>Nome da Empresa:</label>
+                    <label>
+                        <input type="text" name="company_name" required>
+                    </label>
+                </div>
+                <div class="field">
+                    <label>ATM:</label>
+                    <label>
+                        <input type="text" name="atm_code">
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Seção: Detalhes -->
+        <fieldset class="form-group">
+            <legend>Detalhes da Parceria</legend>
+            <div class="grid-details">
+                <div class="field">
+                    <label>Setor da Parceria:</label>
+                    <label>
+                        <select name="sector">
+                            <option value="infraestrutura">Infraestrutura</option>
+                            <option value="educacao">Educação</option>
+                            <option value="saude">Saúde | Hospitais & Farmácias</option>
+                            <option value="tecnologia">Tecnologia | Inovação</option>
+                            <option value="alojamento">Alojamento & Alimentação</option>
+                            <option value="logistica">Logística & Transporte</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="field">
+                    <label>Descrição da Proposta:</label>
+                    <label>
+                        <textarea name="proposal" rows="4" placeholder="Descreva os termos da parceria..."></textarea>
+                    </label>
+                </div>
+                <div class="field">
+                    <label>Upload de Documentos (PDF, ZIP):</label>
+                    <input type="file" name="attachment" accept=".pdf,.zip">
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn-partner-submit">Enviar Proposta de Parceria</button>
+    </form>
+</main>
+<div id="footer-placeholder"></div>
+<!-- Scripts finais -->
+<script src="assets/script/script.js"></script>
+</body>
+</html>

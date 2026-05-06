@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-
+    width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/contacts.css">
 </head>
 <body>
-$END$
+  <!-- General Structure | Contact section with dropdown -->
+  <main class="contact-container">
+    <header class="contact-header">
+        <h1>Contact Our Offices</h1>
+        <p>Expert support across Southern Africa</p>
+    </header>
+
+    <div class="branches-wrapper">
+        <!-- Mozambique Office -->
+        <div class="branch-card" id="office-mz">
+            <div class="branch-header">
+                <span class="flag">🇲🇿</span>
+                <h2>Mozambique Office</h2>
+            </div>
+            <address itemtype="https://schema.org">
+                <p><strong>Address:</strong> Avenue 31, Zone 14, T.106</p>
+                <p>Moamba, Maputo Province</p>
+                <p>Postal Code: 1124</p>
+            </address>
+            <div class="contact-details">
+                <p class="green-line">Green-line: +258 84 55 22955</p>
+            </div>
+        </div>
+
+        <!-- South Africa Office -->
+        <div class="branch-card" id="office-sa">
+            <div class="branch-header">
+                <span class="flag">🇿🇦</span>
+                <h2>South Africa Office</h2>
+            </div>
+            <address itemtype="https://schema.org">
+                <p><strong>Address:</strong> Station Road</p>
+                <p>Centurion, Lyttelton Manor</p>
+                <p>Postal Code: 0157</p>
+            </address>
+            <div class="contact-details">
+                <p class="green-line">Green-line: +27 (0) 69 130 8594</p>
+            </div>
+        </div>
+
+        <!-- Burkina Faso Office (Digital Support) -->
+       <div class="branch-card" id="office-bf">
+           <div class="branch-header">
+               <span class="flag">🇧🇫</span>
+               <h2>Burkina Faso Support</h2>
+           </div>
+           <address>
+               <p><strong>Assistance:</strong> Centre de Support à Distance</p>
+               <p>Ouagadougou, Région du Centre</p>
+               <p>Service d'appui numérique</p>
+           </address>
+           <div class="contact-details">
+               <p class="green-line">Email: support.bf@nanosegundo.tech</p>
+           </div>
+       </div>
+    </div>
+</main>
+<div id="footer-placeholder"></div>
+<!-- Scripts finais -->
+<script src="assets/script/script.js"></script>
 </body>
 </html>
